@@ -25,14 +25,25 @@ body {
 }
 
 .container {
+  width: 65%;
   position: relative;
 	margin: 0 auto;
-	width: 900px;
   min-height: 100%;
 	height: auto !important;
   height: 100%;
 }
 
+@media all and (max-width: 80rem) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 50rem) {
+  .container {
+    width: 100%;
+  }
+}
 
 /*
  * -----------------------------------------------
