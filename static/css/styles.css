@@ -37,7 +37,7 @@ body {
  * -----------------------------------------------
  */
 
-a {
+a, .tags a:visited {
 	color: #000;
 }
 
@@ -45,14 +45,33 @@ a:visited {
 	color: #038978;
 }
 
-#menu a, .categories a, #menu a:visited, .categories a:visited {
+#menu a, .categories a, .caption h2 a,
+#menu a:visited, .categories a:visited, .caption h2 a:visited {
   color: #666;
   text-decoration: none;
   cursor: pointer;
 }
 
-a:hover, #site-title a:hover, #menu a:hover, .categories a:hover {
+a:hover, #site-title a:hover, #menu a:hover, .categories a:hover,
+.caption h2 a:hover, .tags a:hover {
 	color: #36bcab;
+}
+
+h1, h2 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 80px;
+	margin: 70px 0 50px 0;
+	text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 38px;
+  margin: 5px 0px 15px 0px;
 }
 
 /*
@@ -60,16 +79,6 @@ a:hover, #site-title a:hover, #menu a:hover, .categories a:hover {
  *                    Header
  * -----------------------------------------------
  */
-
-#site-title {
-	color: #000;
-	font-family: 'Oswald', Helvetica, Arial, sans-serif;
-	font-weight: bold;
-	font-size: 80px;
-	margin: 70px 0 50px 0;
-	text-transform: uppercase;
-	text-align: center;
-}
 
 #site-title a {
 	color: #000;
@@ -144,6 +153,14 @@ footer#footer a {
   margin-left: 300px;
 }
 
+article {
+  border-bottom: 1px dashed #ddd;
+}
+
+article:last-child {
+  border: none
+}
+
 article .meta {
   font-family: 'Oswald', Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -169,10 +186,19 @@ article .meta .categories {
   margin-top: 10px;
 }
 
-article .main {
-  border-bottom: 1px dashed #ddd;
+article .caption {
   padding: 30px 5px 15px 15px;
   float: left;
+  line-height: 175%;
+}
+
+article .tags strong {
+  background: #eee;
+  border-radius: 3px;
+  color: #666;
+  padding: 3px 6px;
+  margin-right: 4px;
+  font-weight: normal;
 }
 
 article:after {

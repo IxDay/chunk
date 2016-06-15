@@ -14,8 +14,19 @@
     {{ end }}
     </p>
   </div>
-  <div class="main">
-    <header>{{.Title}}</header>
-    <footer></footer>
+  <div class="caption">
+    <h2><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
+    <p>
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <a href="{{ .RelPermalink }}">Read More...</a>
+    {{ end }}
+    </p>
+    {{ with .Params.tags }}
+    <p class="tags">
+    <strong>Tagged</strong>
+    {{ delimit (apply . "partial" "tags/link" ".") ", " }}
+    </p>
+    {{ end }}
   </div>
 </article>
