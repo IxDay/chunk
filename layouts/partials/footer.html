@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
 	<p>{{ with .Site.Copyright | safeHTML }}{{ . }}{{ else }}&copy; {{ $.Site.LastChange.Year }} {{ if isset $.Site.Params "Author" }}{{ $.Site.Params.Author }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</p>
 	{{ if isset $.Site.Params "Epitaph" }}<p>{{ $.Site.Params.Epitaph }}</p>{{ end }}
   <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
