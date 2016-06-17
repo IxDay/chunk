@@ -9,7 +9,9 @@
       {{ range $key, $value := .Paginator.Pages }}
       {{ .Render "caption" }}
       {{ end }}
+
     </div>
+    {{ partial "pagination.html" . }}
 
     {{ partial "footer.html" . }}
     </div>

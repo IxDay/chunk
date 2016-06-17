@@ -1,21 +1,7 @@
 <article>
-  <div class="meta">
-    <time class="date">
-      {{ with .Site.Params.DateForm }}
-      {{ $.Date.Format . }}
-      {{ else }}
-      {{ $.Date.Format "Mon Jan 2 2006" }}
-      {{ end }}
-    </time>
-    <p class="comments">0 comments</p>
-    <p class="categories">
-    {{ range .Params.categories }}
-    <a href="categories/{{ . | urlize }}">{{ . }}</a>
-    {{ end }}
-    </p>
-  </div>
-  <div class="caption">
-    <h2><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
+    {{ partial "meta.html" . }}
+    <div class="caption">
+    <h2><a href="{{ .RelPermalink }}">{{.Title }}</a></h2>
     <p>
     {{ .Summary }}
     {{ if .Truncated }}
