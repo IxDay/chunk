@@ -1,7 +1,7 @@
 <article>
     {{ partial "meta.html" . }}
     <div class="caption">
-    <h2><a href="{{ .RelPermalink }}">{{.Title }}</a></h2>
+    <h2 class="caption-title"><a href="{{ .RelPermalink }}">{{.Title }}</a></h2>
     <p>
     {{ .Summary }}
     {{ if .Truncated }}
