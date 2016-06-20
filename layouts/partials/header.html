@@ -2,15 +2,16 @@
   <h1 id="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
   <nav id="menu">
     <ul>
-      {{ with .Site.Menus.links }}
+      {{ with .Site.Menus.main }}
         {{ range $link := . }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
+      {{ if and (isset .Site.Params "showCategories") .Site.Params.showCategories }}
       {{ range $name, $taxo := .Site.Taxonomies.categories }}
       <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li>
+      {{ end }}
       {{ end }}
     </ul>
   </nav>
 </header>
-
