@@ -21,6 +21,7 @@
         {{ .Content }}
       </div>
       </article>
+      {{ template "_internal/disqus.html" . }}
     </div>
 
     {{ partial "footer.html" . }}
