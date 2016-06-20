@@ -3,19 +3,19 @@
 
 name = "Chunk"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/IxDay/chunk/blob/master/LICENSE.md"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = "http://ixday.github.io/"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.15
 
 [author]
-  name = ""
-  homepage = ""
+  name = "IxDay"
+  homepage = "http://ixday.github.io/"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
+  name = "Chunk"
+  homepage = "https://chunkdemo.wordpress.com/"
   repo = ""
