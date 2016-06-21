@@ -88,6 +88,14 @@ h2.caption-title  {
   margin: 5px 0 15px 0;
 }
 
+h2.not-found {
+  font-size: 65px;
+  background: #333;
+  color: #eee;
+  text-align: center;
+  line-height: normal;
+}
+
 h3 {
   margin: 10px 0 5px 0;
 }
