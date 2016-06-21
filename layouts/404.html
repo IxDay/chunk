@@ -1,11 +1,1 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
-  <body>
-    <div class="container">
-    {{ partial "header.html" . }}
-
-    <h2 class="not-found">404: Not Found</h2>
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+{{ define "title" }}<h2 class="not-found">404: Not Found</h2>{{ end }}

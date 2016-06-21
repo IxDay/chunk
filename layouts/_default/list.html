@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  {{ partial "head.html" . }}
-  <body>
-    <div class="container">
-    {{ partial "header.html" . }}
-    <h2 class="taxonomy-title">Filed under {{ .Title }}...</h2>
-    <div class="contents">
-      {{ range $key, $value := .Paginator.Pages }}
-      {{ .Render "caption" }}
-      {{ end }}
+{{ define "title" }}<h2 class="taxonomy-title">Filed under {{ .Title }}...</h2>{{ end }}
 
-    </div>
-    {{ partial "pagination.html" . }}
+{{ define "content"}}
+  {{ range $key, $value := .Paginator.Pages }}
+    {{ .Render "caption" }}
+  {{ end }}
+{{ end }}
 
-    {{ partial "footer.html" . }}
-    </div>
-  </body>
-</html>
+{{ define "footer" }}
+  {{ partial "pagination.html" . }}
+{{ end }}
+
