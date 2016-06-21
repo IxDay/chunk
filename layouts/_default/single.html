@@ -3,28 +3,30 @@
   {{ partial "head.html" . }}
   <body>
     <div class="container">
-    {{ partial "header.html" . }}
+      {{ partial "header.html" . }}
 
-    <div class="contents">
-      <article>
-      {{ partial "meta.html" . }}
-      <div class="caption">
-        <header>
-        <h2>{{ .Title }}</h2>
-        {{ with .Params.tags }}
-        <p class="tags">
-        <strong>Tagged</strong>
-        {{ delimit (apply . "partial" "tags/link" ".") ", " }}
-        </p>
-        </header>
-        {{ end }}
-        {{ .Content }}
+      <div class="contents">
+        <article>
+          {{ partial "meta.html" . }}
+          <div class="caption">
+            <header>
+              <h2>{{ .Title }}</h2>
+
+              {{ with .Params.tags }}
+              <p class="tags">
+              <strong>Tagged</strong>
+              {{ delimit (apply . "partial" "tags/link" ".") ", " }}
+              </p>
+              {{ end }}
+
+            </header>
+            {{ .Content }}
+          </div>
+        </article>
+        {{ template "_internal/disqus.html" . }}
       </div>
-      </article>
-      {{ template "_internal/disqus.html" . }}
-    </div>
 
-    {{ partial "footer.html" . }}
+      {{ partial "footer.html" . }}
     </div>
   </body>
 </html>

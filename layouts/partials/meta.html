@@ -6,11 +6,16 @@
     {{ $.Date.Format "Mon Jan 2 2006" }}
     {{ end }}
   </time>
-  <p class="comments">0 comments</p>
+  <div class="comments">
+    <a href="{{ .Permalink }}#disqus_thread">
+      <span class="disqus-comment-count" data-disqus-identifier="{{.Site.DisqusShortname }}">
+      </span>
+      comments
+    </a>
+  </div>
   <p class="categories">
   {{ range .Params.categories }}
   <a href="/categories/{{ . | urlize }}">{{ . }}</a>
   {{ end }}
   </p>
 </div>
-

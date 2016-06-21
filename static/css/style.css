@@ -207,10 +207,12 @@ article .meta time {
   font-size: 25px;
 }
 
-article .meta .comments {
+article .meta .comments a {
   color: #36bcab;
   font-size: 22px;
+  text-decoration: none;
 }
+
 
 article .meta .categories {
   font-size: 16px;
