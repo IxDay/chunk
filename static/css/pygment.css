@@ -2,7 +2,6 @@ pre {
   margin: 0;
   font-size: 12px;
   line-height: 150%;
-  padding: 5px 10px 5px 0;
 }
 
 code {
@@ -44,11 +43,15 @@ table.highlighttable {
   background: #fff;
   color: #4d4d4c;
   border: 1px solid #d8d8d8;
-  padding: 0;
+  overflow: auto;
 }
 
 .highlight pre {
-  padding-left: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.highlight code {
+  color: #4d4d4c;
 }
 
 .highlight .hll { background-color: #d6d6d6 }
