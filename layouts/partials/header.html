@@ -7,7 +7,7 @@
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
-      {{ if and (isset .Site.Params "showCategories") .Site.Params.showCategories }}
+      {{ if and (isset .Site.Params "showcategories") .Site.Params.showCategories }}
       {{ range $name, $taxo := .Site.Taxonomies.categories }}
       <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li>
       {{ end }}
