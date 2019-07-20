@@ -1,14 +1,14 @@
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 <nav class="pagination">
   {{ if .Paginator.HasNext }}
-  <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}" rel="nofollow">
+  <a href="{{ .RelPermalink }}page/{{ .Paginator.Next.PageNumber }}" rel="nofollow">
     « Older posts
   </a>
   {{ else }}
   <a class="hidden"></a>
   {{ end }}
   {{ if .Paginator.HasPrev }}
-  <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}" rel="nofollow">
+  <a href="{{ .RelPermalink }}page/{{ .Paginator.Prev.PageNumber }}" rel="nofollow">
     Newer posts »
   </a>
   {{ else }}
