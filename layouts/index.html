@@ -6,6 +6,8 @@
 
 {{ define "footer" }}
   {{ partial "pagination.html" . }}
-  {{ partial "scripts.html" . }}
+  {{ if .Site.Params.remark42SiteID }}
+    {{ .Scratch.Set "remark42_component" (slice "counter") }}
+    {{ partial "remark.html" . }}
+  {{ end }}
 {{ end }}
-

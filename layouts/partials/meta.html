@@ -7,11 +7,8 @@
     {{ end }}
   </time>
   <div class="comments">
-    <a href="{{ .Permalink }}#disqus_thread">
-      <span class="disqus-comment-count" data-disqus-identifier="{{.Site.DisqusShortname }}">
-      </span>
-      comments
-    </a>
+    <span class="remark42__counter" data-url="{{ .Permalink }}"></span>
+    comments
   </div>
   <p class="categories">
   {{ range .Params.categories }}

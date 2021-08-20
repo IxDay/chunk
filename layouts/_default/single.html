@@ -16,5 +16,14 @@
     {{ .Content }}
   </div>
 </article>
-{{ template "_internal/disqus.html" . }}
+{{ if .Site.Params.remark42SiteID }}
+  <div id="remark42"></div>
+{{ end }}
+{{ end }}
+
+{{ define "footer" }}
+{{ if .Site.Params.remark42SiteID }}
+  {{ .Scratch.Set "remark42_component" (slice "embed" "counter") }}
+  {{ partial "remark.html" . }}
+{{ end }}
 {{ end }}
